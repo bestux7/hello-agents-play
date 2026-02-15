@@ -1,4 +1,4 @@
-""" 运行实例 """
+""" ReAct运行实例 """
 from agents import ReActAgent
 from llm import HelloAgentsLLM
 from core import ToolExecutor
