@@ -1,5 +1,8 @@
 """ Plan-And-Solve规划执行智能体 """
 
+# 先规划、再执行。将任务分解为清晰的步骤，再逐一执行
+# 核心优势：结构性、稳定性 适用于处理结构性强、可以被清晰分解的复杂逻辑任务
+
 from llm import HelloAgentsLLM
 from planners import Planner
 from solvers import Executor

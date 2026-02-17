@@ -1,6 +1,8 @@
 # Reasoning and Action 推理与行动智能体ReAct 感知-思考-行动(调用工具)-观察-感知
 # 优点：高可解释性(Thought链清晰)、动态规划与纠错能力(走一步看一步)、工具协同能力
 # 缺点：对LLM能力强依赖、执行效率问题(多次调用LLM)、提示词脆弱(依赖提示词模块)、可能陷入局部最优(步进决策缺乏长远看能力)
+# 核心优势：环境适应性、动态纠错能力 适用于探索性、需要外部工具输入的任务
+
 import re
 from llm import HelloAgentsLLM
 from core import ToolExecutor
