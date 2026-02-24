@@ -1,0 +1,5 @@
+# 依赖环境
+langgraph==1.0.0a3
+langchain_openai==0.3.33
+python-dotenv
+tavily-python
