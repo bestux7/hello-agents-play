@@ -12,9 +12,9 @@ from dotenv import load_dotenv
 # 1.配置LLM客户端
 load_dotenv() # 加载.env文件环境变量
 
-API_KEY = os.getenv("SILICON_FLOW_API_KEY")
-BASE_URL = os.getenv("SILICON_FLOW_BASE_URL")
-MODEL_NAME = os.getenv("QWEN_MODEL_NAME")
+API_KEY = os.getenv("OPENAI_API_KEY")
+BASE_URL = os.getenv("OPENAI_BASE_URL")
+MODEL_NAME = os.getenv("OPENAI_MODEL_NAME")
 TAVILY_API_KEY = os.getenv("TAVILY_API_KEY")
 os.environ['TAVILY_API_KEY'] = TAVILY_API_KEY
 
@@ -23,6 +23,7 @@ llm = OpenAICompatibleClient(
   api_key=API_KEY,
   base_url=BASE_URL
 )
+print(f"使用LLM模型：{MODEL_NAME}\n" + "="*40)
 
 # 2.初始化prompt
 user_prompt = "你好，请帮我查询一下今天长春的天气，然后根据天气推荐一个合适的旅游景点。"
