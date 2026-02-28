@@ -1,0 +1,3 @@
+# gradio版本
+gradio==4.20.0 
+gradio-client==0.11.0
