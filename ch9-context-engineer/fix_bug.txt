@@ -1,0 +1,7 @@
+修复hello-agent 0.2.8代码错误
+1. function_call_agent.py文件添加78-95行 _build_tool_schemas函数传给openai的tool_schemas参数为'array'类型时缺少'items'键值对，导致openai报错
+2. TerminalTool中的白名单命令不兼容windows命令和utf-8编码，导致执行失败。
+    1. 在200-201行添加代码，兼容utf-8编码
+    2. 在61-79行添加Windows文件操作命令到白名单
+    3. 在116行添加posix=False参数，兼容Windows反斜杠
+然后执行4_codebase_maintainer.py测试通过
